@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#22B573"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+    <ImageView
+        android:id="@+id/success_icon"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:baselineAlignBottom="true"
+        android:cropToPadding="true"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_clock"/>
+    <TextView
+        android:id="@+id/tv_thankyou_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:fontFamily="cursive"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="@string/thank_you_text"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textColor="#FFFFFF"
+        android:fontFamily="cursive"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:text="@string/your_order"/>
+    <TextView
+        android:id="@+id/tv_show_sum"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textColor="#FFFFFF"
+        android:fontFamily="cursive"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:text="@string/total_sum"/>
+
+</LinearLayout>

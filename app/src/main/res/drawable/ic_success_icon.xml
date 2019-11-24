@@ -1,0 +1,10 @@
+<vector android:autoMirrored="true" android:height="66dp"
+    android:viewportHeight="66" android:viewportWidth="86"
+    android:width="86dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#ffffff" android:pathData="M85.4971,12.746L32.5024,65.7407L20.4315,53.6697L73.4262,0.675L85.4971,12.746Z"/>
+    <group>
+        <clip-path android:pathData="M85.4998,12.7459L32.5051,65.7407L20.4341,53.6697L73.4288,0.675L85.4998,12.7459Z M 0,0M12.574,21.6679L44.5757,53.6696L32.5051,65.7407L0.5031,33.7388L12.574,21.6679Z M 0,0"/>
+        <path android:fillColor="#ffffff" android:pathData="M21.1012,42.2688C24.4345,38.9355 29.8389,38.9355 33.1722,42.2688L38.5377,47.6343C41.871,50.9676 41.871,56.3719 38.5377,59.7052C35.2044,63.0385 29.8001,63.0385 26.4668,59.7052L21.1012,54.3397C17.7679,51.0064 17.7679,45.6021 21.1012,42.2688Z"/>
+    </group>
+    <path android:fillColor="#ffffff" android:pathData="M12.571,21.6679L44.5727,53.6696L32.5017,65.7406L0.5,33.7389L12.571,21.6679Z"/>
+</vector>
