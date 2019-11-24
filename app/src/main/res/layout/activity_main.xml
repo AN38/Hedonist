@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_orange_light"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/icon_group"
+        android:text="@string/menu"
+        android:fontFamily="cursive"
+        android:textSize="45sp"
+        />
+
+    <LinearLayout
+        android:id="@+id/icon_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_menu">
+
+        <ImageView
+            android:id="@+id/ic_coffee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_weight="5"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:padding="11dp"
+            android:src="@drawable/ic_hot_chocolate" />
+
+        <ImageView
+            android:id="@+id/ic_tea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4.7"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:padding="5dp"
+            android:src="@drawable/ic_tea_cup" />
+
+        <ImageView
+            android:id="@+id/ic_milkshake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:padding="5dp"
+            android:src="@drawable/ic_milkshake" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/radio_btn_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/icon_group"
+        android:layout_marginLeft="20dp">
+
+        <RadioButton
+            android:id="@+id/radio_btn_coffee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/icon_group"
+            app:layout_constraintLeft_toLeftOf="@id/radio_btn_group"
+            android:text="@string/coffee"
+            android:textStyle="bold"
+            android:fontFamily="cursive"
+            android:textSize="20sp"
+            android:layout_margin="5dp"/>
+        <RadioButton
+            android:id="@+id/radio_btn_tea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/icon_group"
+            app:layout_constraintLeft_toRightOf="@id/radio_btn_coffee"
+            app:layout_constraintRight_toLeftOf="@id/radio_btn_milkshake"
+            android:text="@string/Tea"
+            android:textStyle="bold"
+            android:fontFamily="cursive"
+            android:textSize="20sp"
+            android:layout_margin="5dp"/>
+
+        <RadioButton
+            android:id="@+id/radio_btn_milkshake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="cursive"
+            android:text="@string/milkshake"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintRight_toRightOf="@id/radio_btn_group"
+            app:layout_constraintTop_toBottomOf="@id/icon_group" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_additions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/radio_btn_group"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/select_an_addition"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:textSize="30sp"/>
+    <LinearLayout
+        android:id="@+id/checkbox_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tv_additions"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingLeft="28dp">
+
+        <CheckBox
+            android:id="@+id/checkbox_cinnamon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_additions"
+            app:layout_constraintLeft_toLeftOf="@id/checkbox_group"
+            android:text="@string/cinnamon"
+            android:textStyle="bold"
+            android:fontFamily="cursive"
+            android:textSize="20sp"
+            android:layout_margin="5dp"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_milk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_additions"
+            app:layout_constraintLeft_toLeftOf="@id/checkbox_group"
+            android:text="@string/milk"
+            android:textStyle="bold"
+            android:fontFamily="cursive"
+            android:textSize="20sp"
+            android:layout_margin="5dp"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_sugar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_additions"
+            app:layout_constraintLeft_toLeftOf="@id/checkbox_group"
+            android:text="@string/sugar"
+            android:textStyle="bold"
+            android:fontFamily="cursive"
+            android:textSize="20sp"
+            android:layout_margin="5dp"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_marshmallow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_additions"
+            app:layout_constraintLeft_toLeftOf="@id/checkbox_group"
+            android:text="@string/marshmallow"
+            android:textStyle="bold"
+            android:fontFamily="cursive"
+            android:textSize="20sp"
+            android:layout_margin="5dp"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_lemon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_additions"
+            app:layout_constraintLeft_toLeftOf="@id/checkbox_group"
+            android:text="@string/lemon"
+            android:textStyle="bold"
+            android:fontFamily="cursive"
+            android:textSize="20sp"
+            android:layout_margin="5dp"/>
+
+        <EditText
+            android:id="@+id/tv_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/checkbox_lemon"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:inputType="textLongMessage"
+            android:maxEms="120"
+            android:hint="@string/write_your_comment_here"
+            android:textStyle="bold"
+            android:fontFamily="cursive"
+            android:textSize="20sp"
+            android:layout_margin="5dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="28dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:text="Order now"/>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
