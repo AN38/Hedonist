@@ -24,7 +24,19 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <string name="total_sum">Total sum: </string>
+    <string name="total_sum">Total sum: %d</string>
     <string name="thank_you_text">Thank you for choosing our service! Your order is being processed.</string>
     <string name="your_order">You ordered:</string>
+
+
+    <string-array name="items">
+        <item>FSHFJ1</item>
+        <item>FSHFJ21</item>
+        <item>FSHFJ312312</item>
+        <item>FSHFJ2412</item>
+        <item>FSHFJ24</item>
+        <item>FSHF2142412</item>
+        <item>FSHF124124</item>
+        <item>FSHFJ124</item>
+    </string-array>
 </resources>

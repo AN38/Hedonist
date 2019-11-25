@@ -2,6 +2,7 @@ package com.example.hedonist;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -12,15 +13,14 @@ import java.util.ArrayList;
 public class ThankyouPage extends AppCompatActivity {
 
     TextView showTotalSum;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.thankyou_page);
-        if(savedInstanceState != null) {
-            showTotalSum = findViewById(R.id.tv_show_sum);
-            String total = savedInstanceState.getString("UserSum");
-            showTotalSum.setText("Total sum: "+total);
-        }
 
+        int totalSum = getIntent().getIntExtra("TOTAL_SUM", 0);
+        showTotalSum = findViewById(R.id.tv_show_sum);
+        showTotalSum.setText(String.format(getString(R.string.total_sum), totalSum));
     }
 }
