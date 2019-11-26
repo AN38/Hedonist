@@ -12,9 +12,6 @@
     <string name="lemon">Lemon (50 KZT)</string>
     <string name="write_your_comment_here">Write your comment here</string>
     <string name="order_now">Order now</string>
-    <string name="_590_kzt">590 KZT</string>
-    <string name="_450_kzt">450 KZT</string>
-    <string name="_750_kzt">750 KZT</string>
     <string name="title_activity_login">Sign in</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
