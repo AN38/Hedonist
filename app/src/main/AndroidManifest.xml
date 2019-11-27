@@ -14,19 +14,14 @@
         android:theme="@style/AppTheme">
         <activity android:name=".LoginActivity">
             <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
-        <activity android:name=".MenuScreen">
-            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ThankyouPage"></activity>
+        <activity android:name=".LoginActivityPassword"></activity>
+        <activity android:name=".MenuScreen"></activity>
+        <activity android:name=".ThankyouPage" />
     </application>
 
 </manifest>

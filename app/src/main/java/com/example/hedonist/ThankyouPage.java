@@ -14,10 +14,16 @@ public class ThankyouPage extends AppCompatActivity {
 
     TextView showTotalSum;
 
+    TextView showOrder;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.thankyou_page);
+
+//        String order = getIntent().getExtras("ORDER");
+//        showOrder = findViewById(R.id.tv_order);
+//        showOrder.setText(String.format(getString(R.string.your_order), order));
 
         int totalSum = getIntent().getIntExtra("TOTAL_SUM", 0);
         showTotalSum = findViewById(R.id.tv_show_sum);

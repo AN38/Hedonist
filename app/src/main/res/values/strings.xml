@@ -23,11 +23,13 @@
     <string name="login_failed">"Login failed"</string>
     <string name="total_sum">Total sum: %d</string>
     <string name="thank_you_text">Thank you for choosing our service! Your order is being processed.</string>
-    <string name="your_order">You ordered:</string>
+    <string name="your_order">You ordered: %s</string>
     <string name="email_hint">Email:</string>
     <string name="welcome_text">Be hedonist! Just enjoy drinking hot flavored beverage:)</string>
     <string name="application_logo">Application logo</string>
     <string name="continue_btn">Continue</string>
+    <string name="mock_login">userAccount@account.com</string>
+    <string name="password_hint">Password</string>
 
 
     <string-array name="items">

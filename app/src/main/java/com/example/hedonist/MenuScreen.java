@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class MenuScreen extends AppCompatActivity {
@@ -39,6 +40,7 @@ public class MenuScreen extends AppCompatActivity {
     //endregion
 
     private int totalSum = 0;
+    private ArrayList<String> userOrder = new ArrayList<>();
     private OrderModel order = new OrderModel();
 
     @Override
@@ -133,6 +135,7 @@ public class MenuScreen extends AppCompatActivity {
                 int sumOfExtra = mapOfSum.get(LEMON);
                 if(b) {
                     totalSum += sumOfExtra;
+                    userOrder.add(LEMON);
                 } else {
                     totalSum -= sumOfExtra;
                 }
@@ -177,6 +180,7 @@ public class MenuScreen extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MenuScreen.this, ThankyouPage.class);
                 intent.putExtra("TOTAL_SUM", totalSum);
+                intent.putExtra("ORDER", userOrder);
                 startActivity(intent);
             }
         });
