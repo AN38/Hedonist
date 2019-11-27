@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@drawable/gradient_orange_violet"
     tools:context=".LoginActivity"
-    android:padding="20dp">
+    android:padding="24dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -49,7 +49,7 @@
         android:fontFamily="cursive"
         android:textColor="#FFFFFF"
         android:textAlignment="center"
-        android:layout_margin="24dp"/>
+        android:layout_margin="20dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -59,14 +59,51 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <EditText
-            android:layout_height="wrap_content"
+        <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:orientation="horizontal"
+            android:padding="1dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:src="@drawable/ic_coffee"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:layout_gravity="center"/>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:src="@drawable/ic_sugar"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:layout_gravity="center"/>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:src="@drawable/ic_muffin"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1.2"
             android:layout_gravity="center"
-            android:hint="@string/prompt_email"/>
+            android:hint="@string/prompt_email"
+            android:layout_marginTop="5dp"/>
         <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:layout_marginTop="10dp"
             android:background="@drawable/btn_continue"
             android:textColor="#FFFFFF"
