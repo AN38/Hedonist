@@ -15,8 +15,8 @@ public class LoginActivity extends AppCompatActivity {
 
     private Button buttonContinue;
     private EditText editTextEmail;
-    private String login = "nikolskaya.a@rahmetapp.kz";
-    private int error = R.string.invalid_email;
+    private String login = "nikolskaya.a@chocolife.kz";
+    private int invalid_email_error = R.string.invalid_email;
 
 
     @Override
@@ -32,11 +32,11 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String editText = editTextEmail.getText().toString();
                 if (editText.equals(login)) {
-                    Toast.makeText(LoginActivity.this,editText,Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(LoginActivity.this, LoginActivityPassword.class);
+                    intent.putExtra("User Email", editText);
                     startActivity(intent);
                 } else {
-                    Toast.makeText(LoginActivity.this,error,Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginActivity.this,invalid_email_error,Toast.LENGTH_LONG).show();
                 }
 
             }

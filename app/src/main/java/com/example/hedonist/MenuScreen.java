@@ -98,11 +98,10 @@ public class MenuScreen extends AppCompatActivity {
         checkBoxMilk.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-//                checkBoxLemon.setChecked(false);
                 int sumOfExtra = mapOfSum.get(MILK);
                 if(b) {
-                    if(checkBoxMarshmallow.isChecked()) {
-                        checkBoxMarshmallow.setChecked(false);
+                    if(checkBoxLemon.isChecked()) {
+                        checkBoxLemon.setChecked(false);
                     }
                     totalSum += sumOfExtra;
                 } else {
@@ -116,9 +115,6 @@ public class MenuScreen extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 int sumOfExtra = mapOfSum.get(MARSHMALLOW);
                 if(b) {
-                    if(checkBoxMilk.isChecked()) {
-                        checkBoxMilk.setChecked(false);
-                    }
                     totalSum += sumOfExtra;
                 } else {
                     totalSum -= sumOfExtra;
@@ -129,11 +125,11 @@ public class MenuScreen extends AppCompatActivity {
         checkBoxLemon.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-//                checkBoxMilk.setChecked(false);
-
-
                 int sumOfExtra = mapOfSum.get(LEMON);
                 if(b) {
+                    if(checkBoxMilk.isChecked()) {
+                        checkBoxMilk.setChecked(false);
+                    }
                     totalSum += sumOfExtra;
                     userOrder.add(LEMON);
                 } else {
@@ -186,11 +182,6 @@ public class MenuScreen extends AppCompatActivity {
         });
     }
 
-//    @Override
-//    public void onSaveInstanceState(@NonNull Bundle outState) {
-//        super.onSaveInstanceState(outState);
-//        outState.putString("UserSum", String.valueOf(totalSum));
-//    }
 
     //region Support
     private void setAmount(int amount) {
