@@ -38,6 +38,7 @@
         android:textColor="#FFFFFF"
         android:fontFamily="cursive"
         android:textStyle="bold"
+        android:textAllCaps="false"
         android:textSize="22sp"
         android:text="@string/your_order"/>
     <TextView

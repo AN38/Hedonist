@@ -40,7 +40,7 @@ public class MenuScreen extends AppCompatActivity {
     //endregion
 
     private int totalSum = 0;
-    private ArrayList<String> userOrder = new ArrayList<>();
+    private ArrayList<String> totalOrder = new ArrayList<>();
     private OrderModel order = new OrderModel();
 
     @Override
@@ -51,7 +51,7 @@ public class MenuScreen extends AppCompatActivity {
         showSum = findViewById(R.id.tv_total_sum);
         totalSum += mapOfSum.get(COFFEE);
         setAmount(totalSum);
-
+        totalOrder.add(order.getBeverage().toString());
         checkBoxCinnamon = findViewById(R.id.checkbox_cinnamon);
         checkBoxMilk = findViewById(R.id.checkbox_milk);
         checkBoxSugar = findViewById(R.id.checkbox_sugar);
@@ -64,22 +64,27 @@ public class MenuScreen extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup arg0, int id) {
                 int diff = 0;
+                String chosenBeverage = order.getBeverage().toString();
                 switch (id) {
                     case R.id.radio_btn_coffee:
                         diff = countDifference(order.getBeverage(), OrderModel.BEVERAGE.COFFEE);
                         order.setBeverage(OrderModel.BEVERAGE.COFFEE);
+                        chosenBeverage = order.getBeverage().toString();
                         break;
                     case R.id.radio_btn_tea:
                         diff = countDifference(order.getBeverage(), OrderModel.BEVERAGE.TEA);
                         order.setBeverage(OrderModel.BEVERAGE.TEA);
+                        chosenBeverage = order.getBeverage().toString();
                         break;
                     case R.id.radio_btn_milkshake:
                         diff = countDifference(order.getBeverage(), OrderModel.BEVERAGE.MILKSHAKE);
                         order.setBeverage(OrderModel.BEVERAGE.MILKSHAKE);
+                        chosenBeverage = order.getBeverage().toString();
                         break;
                 }
                 totalSum += diff;
                 setAmount(totalSum);
+                totalOrder.add(chosenBeverage);
             }
         });
 
@@ -89,8 +94,10 @@ public class MenuScreen extends AppCompatActivity {
                 int sumOfExtra = mapOfSum.get(CINNAMON);
                 if(b) {
                     totalSum += sumOfExtra;
+                    totalOrder.add(CINNAMON);
                 } else {
                     totalSum -= sumOfExtra;
+                    totalOrder.remove(CINNAMON);
                 }
                 setAmount(totalSum);
             }
@@ -104,8 +111,10 @@ public class MenuScreen extends AppCompatActivity {
                         checkBoxLemon.setChecked(false);
                     }
                     totalSum += sumOfExtra;
+                    totalOrder.add(MILK);
                 } else {
                     totalSum -= sumOfExtra;
+                    totalOrder.remove(MILK);
                 }
                 setAmount(totalSum);
             }
@@ -116,8 +125,10 @@ public class MenuScreen extends AppCompatActivity {
                 int sumOfExtra = mapOfSum.get(MARSHMALLOW);
                 if(b) {
                     totalSum += sumOfExtra;
+                    totalOrder.add(MARSHMALLOW);
                 } else {
                     totalSum -= sumOfExtra;
+                    totalOrder.remove(MARSHMALLOW);
                 }
                 setAmount(totalSum);
             }
@@ -131,14 +142,25 @@ public class MenuScreen extends AppCompatActivity {
                         checkBoxMilk.setChecked(false);
                     }
                     totalSum += sumOfExtra;
-                    userOrder.add(LEMON);
+                    totalOrder.add(LEMON);
                 } else {
                     totalSum -= sumOfExtra;
+                    totalOrder.remove(LEMON);
                 }
                 setAmount(totalSum);
             }
         });
 
+        checkBoxSugar.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b) {
+                    totalOrder.add("SUGAR");
+                } else {
+                    totalOrder.remove("SUGAR");
+                }
+            }
+        });
 //        checkBoxCinnamon.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View checkBoxCinnamon) {
@@ -176,7 +198,7 @@ public class MenuScreen extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MenuScreen.this, ThankyouPage.class);
                 intent.putExtra("TOTAL_SUM", totalSum);
-                intent.putExtra("ORDER", userOrder);
+                intent.putExtra("ORDER", totalOrder.toString());
                 startActivity(intent);
             }
         });

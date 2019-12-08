@@ -20,7 +20,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivityPassword"></activity>
-        <activity android:name=".MenuScreen"></activity>
+        <activity android:name=".MenuScreen">
+
+        </activity>
         <activity android:name=".ThankyouPage" />
     </application>
 

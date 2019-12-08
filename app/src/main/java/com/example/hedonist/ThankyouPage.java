@@ -21,12 +21,14 @@ public class ThankyouPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.thankyou_page);
 
-//        String order = getIntent().getExtras("ORDER");
-//        showOrder = findViewById(R.id.tv_order);
-//        showOrder.setText(String.format(getString(R.string.your_order), order));
-
         int totalSum = getIntent().getIntExtra("TOTAL_SUM", 0);
         showTotalSum = findViewById(R.id.tv_show_sum);
         showTotalSum.setText(String.format(getString(R.string.total_sum), totalSum));
+
+
+
+        String order = getIntent().getStringExtra("ORDER");
+        showOrder = findViewById(R.id.tv_order);
+        showOrder.setText(String.format(getString(R.string.your_order), order));
     }
 }
