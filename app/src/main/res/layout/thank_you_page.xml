@@ -10,46 +10,49 @@
 
     <ImageView
         android:id="@+id/success_icon"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_margin="20dp"
         android:layout_weight="1"
         android:adjustViewBounds="true"
         android:baselineAlignBottom="true"
         android:cropToPadding="true"
-        android:layout_margin="20dp"
-        android:src="@drawable/ic_clock"/>
+        android:src="@drawable/ic_clock" />
+
     <TextView
         android:id="@+id/tv_thankyou_text"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="10dp"
         android:layout_weight="1"
+        android:fontFamily="cursive"
+        android:text="@string/thank_you_text"
+        android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
-        android:fontFamily="cursive"
-        android:textStyle="bold"
-        android:textAlignment="center"
-        android:text="@string/thank_you_text"
-        android:layout_marginTop="10dp"/>
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/tv_order"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:textColor="#FFFFFF"
         android:fontFamily="cursive"
-        android:textStyle="bold"
+        android:text="@string/your_order"
         android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         android:textSize="22sp"
-        android:text="@string/your_order"/>
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/tv_show_sum"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:textColor="#FFFFFF"
         android:fontFamily="cursive"
-        android:textStyle="bold"
+        android:text="@string/total_sum"
+        android:textColor="#FFFFFF"
         android:textSize="22sp"
-        android:text="@string/total_sum"/>
+        android:textStyle="bold" />
 
 </LinearLayout>

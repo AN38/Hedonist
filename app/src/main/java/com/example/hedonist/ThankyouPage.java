@@ -14,7 +14,7 @@ public class ThankyouPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.thankyou_page);
+        setContentView(R.layout.thank_you_page);
 
         int totalSum = getIntent().getIntExtra("TOTAL_SUM", 0);
         showTotalSum = findViewById(R.id.tv_show_sum);
