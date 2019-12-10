@@ -1,14 +1,9 @@
 package com.example.hedonist;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.util.ArrayList;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ThankyouPage extends AppCompatActivity {
 
@@ -24,8 +19,6 @@ public class ThankyouPage extends AppCompatActivity {
         int totalSum = getIntent().getIntExtra("TOTAL_SUM", 0);
         showTotalSum = findViewById(R.id.tv_show_sum);
         showTotalSum.setText(String.format(getString(R.string.total_sum), totalSum));
-
-
 
         String order = getIntent().getStringExtra("ORDER");
         showOrder = findViewById(R.id.tv_order);

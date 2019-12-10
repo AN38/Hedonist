@@ -1,8 +1,5 @@
 package com.example.hedonist;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,12 +8,16 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import static com.example.hedonist.LoginActivity.LOGIN_KEY;
+
 public class LoginActivityPassword extends AppCompatActivity {
+
+    private final String password = "qwerty123";
 
     private Button buttonLogIn;
     private EditText editTextPassword;
-    private String password = "qwerty123";
-    private int invalid_password_error = R.string.invalid_password;
     private TextView userlogin;
 
     @Override
@@ -26,7 +27,7 @@ public class LoginActivityPassword extends AppCompatActivity {
         userlogin = findViewById(R.id.user_login);
         buttonLogIn = findViewById(R.id.btn_log_in);
         editTextPassword = findViewById(R.id.et_password);
-        String login = getIntent().getStringExtra("User Email");
+        String login = getIntent().getStringExtra(LOGIN_KEY);
         userlogin.setText(login);
 
 
@@ -38,7 +39,7 @@ public class LoginActivityPassword extends AppCompatActivity {
                     Intent intent = new Intent(LoginActivityPassword.this, MenuScreen.class);
                     startActivity(intent);
                 } else {
-                    Toast.makeText(LoginActivityPassword.this, invalid_password_error, Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginActivityPassword.this, R.string.invalid_password, Toast.LENGTH_LONG).show();
                 }
             }
         });

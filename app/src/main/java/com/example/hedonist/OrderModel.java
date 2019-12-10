@@ -1,6 +1,7 @@
 package com.example.hedonist;
 
 public class OrderModel {
+
     private BEVERAGE beverage = BEVERAGE.COFFEE;
 
     public BEVERAGE getBeverage() {
